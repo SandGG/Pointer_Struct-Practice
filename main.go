@@ -8,11 +8,8 @@ type figure struct {
 }
 
 func main() {
-	var height, width int = 20, 10
-	rectangle := figure{&height, &width, "Rectangle"}
-	fmt.Println(rectangle)
-	area(&rectangle)
-	fmt.Println(rectangle)
+	var height, width int = 10, 50
+	area(&figure{height: &height, width: &width, name: "Rectangle"})
 }
 
 func area(shape *figure) {
